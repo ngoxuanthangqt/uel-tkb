@@ -136,7 +136,11 @@ footer{text-align:center;padding:28px 0 0;font-family:var(--mono);font-size:11px
     </ol></div>
     <textarea id="raw-sem" placeholder="Dán bảng TKB học kỳ vào đây..."></textarea>
     <div class="fr">
-      <div class="field"><label>Ngày Thứ 2 của Tuần 1</label><input type="date" id="sem-w1" value="2026-04-20"></div>
+      <div class="field">
+        <label>Ngày Thứ 2 của Tuần 1</label>
+        <small style="display:block;color:var(--red);font-size:11px;margin-bottom:5px;">⚠ Quan trọng</small>
+        <input type="date" id="sem-w1" value="2026-04-20">
+      </div>
       <div class="field"><label>Học kỳ</label><input type="text" id="sem-label" value="HK3 2025-2026"></div>
     </div>
     <div class="br"><button class="btn btn-p" onclick="parseSem()">Nhận dạng bảng →</button></div>
