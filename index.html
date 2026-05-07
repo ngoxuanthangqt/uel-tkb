@@ -89,13 +89,14 @@ footer{text-align:center;padding:28px 0 0;font-family:var(--mono);font-size:11px
   <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden">
     <div style="padding:12px 16px;background:var(--accent-bg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px">
       <span style="font-family:var(--mono);font-size:11px;font-weight:700;color:var(--accent)">CÁCH 1</span>
-      <span style="font-size:13px;font-weight:500;color:var(--ink)">Bảng đăng ký học phần — nhập 1 lần, ra lịch cả học kỳ</span>
+      <span style="font-size:13px;font-weight:500;color:var(--ink)">Bảng TKB học kỳ — nhập 1 lần, ra lịch cả học kỳ (tuy nhiên không thể nhận diện những môn học xen kẽ tuần)</span>
     </div>
     <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--ink2)">
-      <div>① Vào trang <strong>Đăng ký học phần</strong> trên cổng sinh viên UEL</div>
-      <div>② Bôi đen toàn bộ bảng từ ô <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">STT</code> đến <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">Ngày kết thúc</code> → <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">Ctrl+C</code></div>
-      <div>③ Chọn tab <strong>Bảng đăng ký học phần</strong> → dán vào ô → điền ngày Thứ 2 của Tuần 1 → nhấn <strong>Nhận dạng bảng</strong></div>
-      <div>④ Kiểm tra danh sách môn → <strong>Tạo lịch học</strong> → <strong>Xuất .ICS</strong> → import vào Google Calendar</div>
+      <div>1. Vào trang <strong>Thời khóa biểu</strong> trên cổng sinh viên UEL</div>
+      <div>2. Nhấn <strong>In thời khóa biểu</strong> để mở bảng đầy đủ → trang in hiện ra dưới dạng popup → nhấn <strong>Esc</strong> để thoát chế độ in (bảng vẫn còn trên màn hình)
+      <div>3. Bôi đen toàn bộ bảng từ ô <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">STT</code> đến <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">Ngày kết thúc</code> → <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">Ctrl+C</code></div>
+      <div>4. Chọn tab <strong>Bảng TKB học kỳ</strong> → dán vào ô → điền ngày Thứ 2 của Tuần 1 → nhấn <strong>Nhận dạng bảng</strong></div>
+      <div>5. Kiểm tra danh sách môn → <strong>Tạo lịch học</strong> → <strong>Xuất .ICS</strong> → import vào Google Calendar</div>
     </div>
   </div>
 
@@ -105,10 +106,10 @@ footer{text-align:center;padding:28px 0 0;font-family:var(--mono);font-size:11px
       <span style="font-size:13px;font-weight:500;color:var(--ink)">Bảng TKB từng tuần — chính xác hơn, hỗ trợ lịch xen kẽ</span>
     </div>
     <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--ink2)">
-      <div>① Vào trang <strong>Thời Khóa Biểu</strong> → chọn các tuần cần xem</div>
-      <div>② Bôi đen từ dòng <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">Tuần : X  Từ ngày...</code> đến hết bảng → <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:11px">Ctrl+C</code> — có thể bôi nhiều tuần cùng lúc</div>
-      <div>③ Chọn tab <strong>Bảng TKB từng tuần</strong> → dán vào ô → nhấn <strong>Phân tích bảng</strong></div>
-      <div>④ Kiểm tra danh sách buổi học → <strong>Tạo lịch học</strong> → <strong>Xuất .ICS</strong> → import vào Google Calendar</div>
+      <div>1. Vào trang <strong>Thời Khóa Biểu</strong> → chọn các tuần cần xem</div>
+      <div>2. Bôi đen từ dòng <strong>Tuần : X  Từ ngày...</strong> đến hết bảng → <strong>Ctrl+C</strong> — cần copy paste từng tuần một</div>
+      <div>3. Chọn tab <strong>Bảng TKB từng tuần</strong> → dán vào ô → nhấn <strong>Phân tích bảng</strong></div>
+      <div>4. Kiểm tra danh sách buổi học → <strong>Tạo lịch học</strong> → <strong>Xuất .ICS</strong> → import vào Google Calendar</div>
     </div>
   </div>
 
@@ -125,7 +126,7 @@ footer{text-align:center;padding:28px 0 0;font-family:var(--mono);font-size:11px
 <div class="card">
   <div class="ct">Chọn loại bảng</div>
   <div class="tabs">
-    <button class="tab active" id="tab-sem" onclick="switchMode('sem')">📋 Bảng đăng ký học phần<br><small style="font-size:11px;opacity:.7">Cả học kỳ · 1 lần paste</small></button>
+    <button class="tab active" id="tab-sem" onclick="switchMode('sem')">📋 Bảng TKB học kỳ<br><small style="font-size:11px;opacity:.7">Cả học kỳ · 1 lần paste</small></button>
     <button class="tab" id="tab-week" onclick="switchMode('week')">📅 Bảng TKB từng tuần<br><small style="font-size:11px;opacity:.7">Paste 1 hoặc nhiều tuần</small></button>
   </div>
   <div id="mode-sem">
@@ -134,7 +135,7 @@ footer{text-align:center;padding:28px 0 0;font-family:var(--mono);font-size:11px
       <li>Bôi đen toàn bộ bảng từ ô <strong>STT</strong> đến <strong>Ngày kết thúc</strong></li>
       <li>Nhấn <code>Ctrl+C</code> rồi <code>Ctrl+V</code> vào ô bên dưới</li>
     </ol></div>
-    <textarea id="raw-sem" placeholder="Dán bảng đăng ký học phần vào đây..."></textarea>
+    <textarea id="raw-sem" placeholder="Dán bảng TKB học kỳ vào đây..."></textarea>
     <div class="fr">
       <div class="field"><label>Ngày Thứ 2 của Tuần 1</label><input type="date" id="sem-w1" value="2026-04-20"></div>
       <div class="field"><label>Học kỳ</label><input type="text" id="sem-label" value="HK3 2025-2026"></div>
